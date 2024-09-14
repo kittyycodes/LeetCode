@@ -1,4 +1,7 @@
-class Solution {
+import java.util.Map;
+import java.util.HashMap;
+
+class KthDistinctString {
     public String kthDistinct(String[] arr, int k) {
         Map<String, Integer> counter = new HashMap<>();
         for (String v : arr) {
@@ -13,5 +16,14 @@ class Solution {
             }
         }
         return "";
+    } 
+    public static void main(String[] args)
+    {
+        KthDistinctString solution = new KthDistinctString();
+
+        String[] arr = {"a", "b", "a", "c", "b", "d"};
+        int k = 2;
+        String result=solution.kthDistinct(arr, k);
+        System.out.println("The "+ k + "th distinct string is: " + result );
     }
 }
